@@ -1,13 +1,14 @@
-public class Rectangle extends Shape {
+public class Triangule extends Shape {
 
 
     private Point topLeft;
-    private int sideA, sideB;
-
+    private int sideA;
+    private Point topRight;
+    private int sideB;
     public static int counter = 0;
     public int counterForObject = 0;
 
-    public Rectangle(Point topLeft, int sideA, int sideB) {
+    public Triangule(Point topLeft, int sideA, int sideB) {
         super(topLeft);
         setSideA(sideA);
         setSideB(sideA);
@@ -35,10 +36,10 @@ public class Rectangle extends Shape {
     }
     @Override
     public double area() {
-        return this.sideA*this.sideB;
+        return (this.sideA*this.sideB)/2;
     }
     public double perimeter(){
-        return 2*sideA + 2*sideB;
+        return sideA+sideB;
     }
 
     public int getSideB() {
